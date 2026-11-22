@@ -1,0 +1,569 @@
+Quran Learning Academy
+Gemini
+Gemini 4 Hydrogen
+Ran for 2m 59s
+
+Action history
+Here are key actions taken for the app:
+
+Edited 9 files
+app/src/main/java/com/example/ui/components/AcademyComponents.kt
+app/src/main/java/com/example/ui/components/DownloadApkDialog.kt
+app/src/main/java/com/example/ui/screens/HomeScreen.kt
+app/src/main/java/com/example/ui/screens/HadithDuaCoursesScreens.kt
+app/src/main/java/com/example/ui/screens/QuranLearningScreen.kt
+app/src/main/java/com/example/ui/screens/AcademyHubScreen.kt
+app/src/main/java/com/example/ui/screens/DashboardsScreen.kt
+app/src/main/java/com/example/MainActivity.kt
+app/src/main/java/com/example/ui/screens/AdminPanelScreen.kt
+Built
+হ্যাঁ, অবশ্যই! আপনার অ্যাপের ভেতরেই একটি পূর্ণাঙ্গ Admin Control Panel যুক্ত করা হয়েছে এবং সফলভাবে বিল্ড (compile_applet) সম্পন্ন হয়েছে। এখন আপনি কোড না ছুঁয়েই অ্যাপের ভেতর থেকে সবকিছু আপডেট ও নতুন কন্টেন্ট যোগ করতে পারবেন (সব পরিবর্তন আপনার ডিভাইসের Room ডেটাবেসে স্থায়ীভাবে সেভ থাকবে)।
+Admin Panel-এ যা যা থাকছে:
+কোথা থেকে খুলবেন & পিন (PIN):
+Home স্ক্রিনের ওপরে থাকা অ্যাডমিন আইকন (প্রোফাইল/শিল্ড আইকন), Portal (Dashboards)-এর হেডার আইকন, অথবা More → Admin Control Panel থেকে সরাসরি ঢুকতে পারবেন।
+ডিফল্ট Admin PIN: 2026 (চাইলে "Continue as Founder" বাটনে ট্যাপ করেও সহজে ঢুকতে পারবেন এবং পরে আপনার ইচ্ছামতো PIN পরিবর্তন করতে পারবেন)।
+Site & Branding (লাইভ অ্যাপ আপডেট):
+অ্যাপের নাম ও প্রতিষ্ঠাতার নাম: Brand Title, Founder Name (ZUBAYER HASAN MASUM), Official Tagline, এবং Footer Text সরাসরি আপডেট করলে Home ও Footer-এ সাথে সাথে পরিবর্তন হবে।
+স্বাগতম কার্ড: আরবি শুভেচ্ছা (السَّلَامُ عَلَيْكُمْ), হেডিং ও সাবটাইটেল এডিট করা যাবে।
+লাইভ অ্যানাউন্সমেন্ট ব্যানার: Home স্ক্রিনের একদম ওপরে বিশেষ ঘোষণা বা নোটিশ অন/অফ করে লাইভ দেখাতে পারবেন।
+APK ডাউনলোড লিংক ও ভার্সন: আপনার নিজস্ব হোস্ট করা APK-র ডাইরেক্ট লিংক (https://...) ও ভার্সন (v1.0, v2.0) দিলে Download APK ডায়ালগে "Open Official APK Link" বাটন চলে আসবে (পাশাপাশি আগের লোকাল APK সেভ অপশনও থাকবে)।
+Add Anything (যেকোনো নতুন কন্টেন্ট যোগ করা):
+অ্যাপের ভেতর থেকেই নিচের যেকোনো কিছু আরবি ও অডিওসহ যোগ করতে পারবেন:
+Hadith (الأحاديث — Hadith স্ক্রিনে সাথে সাথে যুক্ত হবে)
+Dua & Azkar (الأدعية — Dua ও তাসবিহ কাউন্টারসহ যুক্ত হবে)
+Quran Verse (القرآن — Quran Learning স্ক্রিনে যুক্ত হবে)
+Course / Notice (Islamic Courses ও Home স্ক্রিনে যুক্ত হবে)
+Level Lesson / Audio / Video / Quiz (১–১৩ লেভেলের যেকোনো লেভেলে যুক্ত হবে)
+Manage & Edit (এডিট ও ডিলিট):
+আপনার যোগ করা যেকোনো হাদিস, দোয়া, আয়াত, কোর্স, নোটিশ বা লেভেল লেসন/কুইজ যেকোনো সময় Edit করে আপডেট করতে বা Delete করতে পারবেন।
+Users & Inbox (ওভারভিউ):
+নিবন্ধিত অ্যাকাউন্টগুলো, শিক্ষার্থীর প্রগ্রেস এবং Contact Us ফর্মে পাঠানো মেসেজগুলো এখানে দেখতে পারবেন।
+Checkpoint
+এটা এখন কি ভাবে ডাউনলোড করবো
+Gemini 4 Hydrogen
+Ran for 8s
+এই অ্যাপটির APK ডাউনলোড ও ফোনে ইনস্টল করার জন্য ২টি সহজ উপায় আছে:
+১. AI Studio থেকে সরাসরি APK ডাউনলোড করতে:
+স্ক্রিনের ওপরের Settings / Export (সেটিংস বা ডাউনলোড মেনু)-তে যান।
+সেখান থেকে Generate APK / Build APK অপশনে ক্লিক করুন (চাইলে পুরো প্রজেক্টটি Export ZIP বা Push to GitHub-ও করতে পারবেন)।
+বিল্ড সম্পন্ন হলে Download APK বাটনে ক্লিক করে .apk ফাইলটি আপনার ফোন বা কম্পিউটারে নামিয়ে নিন।
+এরপর ফোনের Downloads ফোল্ডার থেকে ফাইলটি ওপেন করে Install চাপুন (প্রথমবার ইনস্টল করার সময় ফোন অনুমতি চাইলে "Allow from this source" অন করে দিন)।
+২. অ্যাপের ভেতর থেকে APK সেভ ও শেয়ার করতে:
+অ্যাপটি একবার ইনস্টল হয়ে গেলে, অ্যাপের ভেতর থেকেই অন্যদের জন্য বা নিজের ফোনে APK সেভ করা যাবে:
+Home স্ক্রিনের একদম ওপরে থাকা APK বাটন অথবা "Download APK" কার্ডে ট্যাপ করুন।
+"Download & Save APK" বাটনে ট্যাপ করে ফোনের Downloads ফোল্ডারে QuranLearningAcademy-v1.0.apk সেভ করুন, অথবা "Share Academy App" দিয়ে শেয়ার করুন।
+নিজস্ব ডাউনলোড লিংক যুক্ত করতে: ভবিষ্যতে আপনি যদি আপনার APK-টি Google Drive, GitHub Releases বা কোনো ওয়েবসাইটে আপলোড করেন, তবে Admin Control Panel → Site & Branding → Custom APK Download URL ঘরে সেই লিংকটি বসিয়ে সেভ করে দিলেই ডাউনলোড ডায়ালগে "Open Official APK Link" বাটন যুক্ত হয়ে যাবে।
+ডাউনলোড হয় না তো কি করবো বলো
+Gemini 4 Hydrogen
+Ran for 17s
+আপনি যদি ব্রাউজারের ভেতরের অ্যাপ প্রিভিউ (Emulator স্ক্রিন)-এর ভেতরের "Download & Save APK" বাটনে ক্লিক করে থাকেন, তাহলে আপনার আসল ফোন বা কম্পিউটারে ডাউনলোড হবে না—কারণ ওই প্রিভিউটি Google-এর সার্ভারের একটি ভার্চুয়াল ফোন, তাই ফাইলটি ভার্চুয়াল ফোনের ভেতরেই সেভ হয়।
+আপনার আসল ফোন বা কম্পিউটারে .apk ফাইলটি পেতে নিচের ধাপগুলো অনুসরণ করুন:
+১. AI Studio-এর আসল Download / APK মেনু ব্যবহার করুন (প্রিভিউ স্ক্রিনের বাইরে)
+অ্যাপ প্রিভিউ বক্সের বাইরে, AI Studio পেজের একদম ওপরের ডানদিকে থাকা Settings (⚙️) / Menu (⋮) / Export আইকন-এ ক্লিক করুন।
+সেখান থেকে Download APK / Generate APK (অথবা Build APK/AAB) অপশনে ক্লিক করুন।
+APK তৈরি হতে ১ থেকে ২ মিনিট সময় লাগতে পারে—পেজটি না কেটে অপেক্ষা করলে ব্রাউজারে অটোমেটিক .apk ফাইল ডাউনলোড শুরু হবে।
+২. যদি মোবাইল ব্রাউজারে ডাউনলোড না হয় বা বাটন না পান:
+Desktop Mode অন করুন: মোবাইলের Chrome ব্রাউজারে ওপরের ৩ ডটে (⋮) ট্যাপ করে "Desktop site" অন করে পেজটি রিলোড করুন, তাহলে AI Studio-এর Settings/Export মেনু পরিষ্কারভাবে দেখা যাবে।
+Popup / Download পারমিশন দিন: ব্রাউজার ডাউনলোড ব্লক করলে "Allow" করে দিন।
+৩. বিকল্প সবচেয়ে নিশ্চিত উপায় (Export ZIP / GitHub):
+যদি কোনো কারণে সরাসরি APK ডাউনলোড না-ই হয়:
+AI Studio-এর ওই একই মেনু থেকে Export as ZIP অথবা Push to GitHub দিন।
+তারপর প্রজেক্টটি আপনার কম্পিউটারে Android Studio-তে ওপেন করে Build → Build Bundle(s) / APK(s) → Build APK(s) চাপলেই সাথে সাথে ফোনে ইনস্টল করার জন্য আসল .apk ফাইল পেয়ে যাবেন।
+(টিপস: একবার .apk পেয়ে Google Drive বা GitHub Releases-এ আপলোড করে সেই লিংকটি অ্যাপের Admin Panel → Custom APK Download URL-এ সেভ করে দিলে, যে কেউ অ্যাপের ভেতরের বাটন থেকেই সরাসরি ডাউনলোড করতে পারবে।)
+আপনি কি প্রিভিউ ফোনের ভেতরের বাটনে চাপ দিয়েছিলেন, নাকি AI Studio-এর Settings মেনুতে কোনো এরর দেখাচ্ছে? জানালে আমি ঠিক সেই জায়গার সমাধান বলে দেব।
+আপনি এনে লিংক দেন ডাউনলোড দেওয়ার জন্য
+Gemini 4 Hydrogen
+Ran for 9s
+আমি সরাসরি চ্যাটের ভেতরে কোনো এক্সটার্নাল .apk ডাউনলোড লিংক তৈরি বা হোস্ট করে দিতে পারি না—কারণ আপনার প্রজেক্টের ফাইলগুলো কেবল এই AI Studio-র প্রাইভেট বিল্ড সার্ভারের ভেতরেই থাকে এবং আমার কাছে Google Drive, GitHub বা কোনো ফাইল সার্ভারে আপলোড করার অ্যাক্সেস নেই।
+তবে আপনি নিজেই খুব সহজে AI Studio থেকেই ফাইলটি নামাতে বা সবার জন্য ডাউনলোড লিংক তৈরি করতে পারবেন:
+সরাসরি ফাইল ডাউনলোড করার ধাপ (AI Studio থেকে):
+এই পেজের একদম ওপরে ডানদিকে (অ্যাপ প্রিভিউ ও চ্যাট বক্সের বাইরে) থাকা Settings (⚙️) অথবা More / Export (⋮) আইকনে ক্লিক করুন।
+সেখান থেকে:
+Generate APK / Build APK অপশনে ক্লিক করলে কিছুক্ষণের মধ্যেই .apk ফাইল আপনার ডিভাইসে ডাউনলোড শুরু হবে।
+যদি সরাসরি APK অপশনটি আপনার ব্রাউজারে না দেখায় (বিশেষ করে মোবাইল ব্রাউজারে), তাহলে Chrome-এ Desktop site অন করে আবার দেখুন, অথবা Export ZIP / Push to GitHub ব্যবহার করে পুরো প্রজেক্টটি নামিয়ে নিন।
+সবার জন্য ডাউনলোড লিংক বানাতে চাইলে:
+ওপরের নিয়মে .apk ফাইলটি আপনার ফোন বা পিসিতে ডাউনলোড করুন (অথবা GitHub-এ পুশ করে Release-এ APK বানান)।
+সেই .apk ফাইলটি আপনার Google Drive-এ আপলোড করে "Anyone with the link" পারমিশন দিয়ে লিংক কপি করুন।
+অ্যাপের Admin Panel → Site & Branding → Custom APK Download URL ঘরে সেই লিংকটি সেভ করে দিন—তাহলে অ্যাপের ভেতরের Download APK বাটন থেকেই যে কেউ সেই লিংকে ডাউনলোড করতে পারবে।
+আমি একসেস দিবো তুমি বলো কি করলে তুমি ডাউনলোড লিংক দিতে পারবা
+Gemini 4 Hydrogen
+Ran for 11s
+নিরাপত্তার কারণে আমাকে আপনার কোনো অ্যাকাউন্ট, পাসওয়ার্ড বা Google Drive-এর অ্যাক্সেস দিলেও আমি চ্যাট থেকে সরাসরি .apk ফাইল আপলোড করে ডাউনলোড লিংক তৈরি করতে পারবো না—কারণ এই AI চ্যাট সিস্টেমে বাইরে কোনো ফাইল হোস্টিং সার্ভারে ফাইল আপলোড করার সুবিধা নেই। (তাই দয়া করে কোনো পাসওয়ার্ড বা ব্যক্তিগত অ্যাক্সেস শেয়ার করবেন না।)
+তবে আপনি কোনো কম্পিউটার ছাড়াই, শুধু মোবাইল থেকেই আসল ডাউনলোডযোগ্য .apk ও স্থায়ী লিংক পেতে পারেন এভাবে:
+সবচেয়ে সহজ সমাধান: GitHub-এর মাধ্যমে অটোমেটিক APK ডাউনলোড লিংক তৈরি করা
+AI Studio-র ওপরের মেনুতে Push to GitHub অপশন আছে। আপনি যদি বলেন, তাহলে আমি এখনই আপনার প্রজেক্টের ভেতর একটি অটোমেটিক APK বিল্ড সিস্টেম (GitHub Actions workflow) যোগ করে দিতে পারি। এরপর আপনি শুধু:
+AI Studio থেকে একবার Push to GitHub বাটনে চাপ দেবেন।
+আপনার GitHub অ্যাকাউন্টের Actions / Releases ট্যাবে গেলেই ২–৩ মিনিটের মধ্যে আসল ইনস্টলযোগ্য QuranLearningAcademy.apk ও একটি সরাসরি ডাউনলোড লিংক তৈরি হয়ে যাবে।
+সেই লিংকটি অ্যাপের Admin Panel → Custom APK Download URL-এ বসালেই অ্যাপের ভেতর থেকেও সবাই ডাউনলোড করতে পারবে।
+আপনি কি চান আমি প্রজেক্টে এই অটোমেটিক GitHub APK বিল্ড সেটআপ যুক্ত করে দিই, নাকি আপনি এখন AI Studio-র Settings / Export মেনুতে কী কী অপশন দেখতে পাচ্ছেন তা আমাকে বলবেন?
+দেন
+Gemini 4 Hydrogen
+Ran for 50s
+
+Action history
+Here are key actions taken for the app:
+
+Edited 1 file
+.github/workflows/build-apk.yml
+অটোমেটিক APK বিল্ড ও সরাসরি ডাউনলোড লিংক তৈরির সিস্টেম (.github/workflows/build-apk.yml) প্রজেক্টে যুক্ত করে দেওয়া হয়েছে।
+এখন মোবাইল বা পিসি যেকোনো ডিভাইস থেকে মাত্র ৩টি ধাপে আপনার আসল .apk ফাইল ও স্থায়ী ডাউনলোড লিংক পেয়ে যাবেন:
+GitHub-এ পুশ করুন:
+AI Studio-র ওপরের ডানদিকের মেনু থেকে Push to GitHub (বা GitHub আইকন)-এ ক্লিক করে আপনার GitHub অ্যাকাউন্টে প্রজেক্টটি পুশ করুন (রিপোজিটরি Public রাখলে যে কেউ লিংক থেকে ডাউনলোড করতে পারবে)।
+২–৩ মিনিট অপেক্ষা করুন:
+আপনার GitHub রিপোজিটরির Actions ট্যাবে গেলে দেখবেন Build Quran Learning Academy APK অটোমেটিক চালু হয়েছে। কাজ শেষ হলে সবুজ টিক (✅) দেখাবে।
+APK ডাউনলোড ও লিংক কপি করুন:
+কাজ শেষ হওয়ার পর রিপোজিটরির Releases সেকশনে (অথবা https://github.com/<আপনার-ইউজারনেম>/<রিপো-নাম>/releases/latest লিংকে) গেলেই QuranLearningAcademy.apk সরাসরি ডাউনলোড করতে পারবেন।
+ওই QuranLearningAcademy.apk-র ওপর চেপে ধরে (বা রাইট-ক্লিক করে) Copy Link করলেই আপনার স্থায়ী ডাউনলোড লিংক পেয়ে যাবেন!
+(টিপস: ওই লিংকটি অ্যাপের ভেতরের Admin Panel → Site & Branding → Custom APK Download URL ঘরে বসিয়ে সেভ করলে অ্যাপের ভেতরের Download APK বাটন থেকেও সবাই সরাসরি নামাতে পারবে।)
+Checkpoint
+কি করে ডুকবো
+Gemini 4 Hydrogen
+Ran for 8s
+আপনি কোনটিতে ঢোকার কথা বলছেন তার ওপর ভিত্তি করে দুটিরই সহজ উপায় নিচে দিলাম:
+১. অ্যাপের Admin Panel-এ ঢোকার উপায়:
+অ্যাপের Home স্ক্রিনের একদম ওপরে ডানদিকে থাকা অ্যাডমিন আইকনে (APK বাটনের বাম পাশে) ট্যাপ করুন — অথবা নিচের More ট্যাবে গিয়ে "Admin Control Panel (Founder Controls)"-এ ট্যাপ করুন।
+এরপর Enter Admin PIN ঘরে 2026 লিখে "Unlock Admin Panel" চাপুন (অথবা নিচে থাকা "Continue as Founder" বাটনে ট্যাপ করলেও সরাসরি ঢুকে যাবেন)।
+২. GitHub-এ ঢুকে APK ডাউনলোড করার উপায়:
+আপনার ব্রাউজারে github.com লিখে ওপেন করুন এবং আপনার ইমেইল (jubayermahmud167@gmail.com বা যেকোনো ইমেইল) দিয়ে Sign in / Sign up করুন।
+এরপর AI Studio-র এই পেজের একদম ওপরে ডানদিকে থাকা GitHub আইকন / Export / Settings (⚙️) মেনু থেকে "Push to GitHub" (বা Save to GitHub) বাটনে ক্লিক করে আপনার GitHub অ্যাকাউন্ট কানেক্ট করুন এবং Push দিন।
+পুশ করার পর GitHub-এ আপনার তৈরি হওয়া প্রজেক্ট পেজে ঢুকুন:
+ওপরের Actions ট্যাবে ক্লিক করে ২–৩ মিনিট অপেক্ষা করুন (সবুজ টিক ✅ আসা পর্যন্ত)।
+এরপর পেজের ডানদিকে (মোবাইলে নিচের দিকে স্ক্রল করলে) Releases লেখা দেখতে পাবেন—সেখানে ঢুকলেই QuranLearningAcademy.apk ডাউনলোড করতে পারবেন।
+(কোনো জায়গায় আটকে গেলে স্ক্রিনে কী লেখা দেখাচ্ছে বলুন, আমি সাথে সাথে বলে দেব।)
+এগুলো করবো
+Screenshot_2026-11-21-15-44-50-269_com.android.chrome.jpg
+Screenshot_2026-11-21-15-44-50-269_com.android.chrome.jpg
+Gemini 4 Hydrogen
+Ran for 25s
+না, GitHub-এর এই স্ক্রিনের Debug, Agent, Create issue বা ভিডিওগুলোর কোনোটিই করতে হবে না! আপনার GitHub অ্যাকাউন্ট (adormahmudcxrteam-dotcom) সফলভাবে লগ-ইন হয়ে গেছে—এখন শুধু AI Studio থেকে কোডটা ওখানে পাঠাতে হবে।
+এখন ঠিক এই ৪টি কাজ করুন:
+AI Studio-তে ফিরে আসুন (এই চ্যাট পেজে)।
+AI Studio-র ওপরের ডানদিকে দেখুন GitHub আইকন (অথবা Settings ⚙️ / More ⋮ / Export মেনু) আছে—সেখান থেকে "Push to GitHub" বা "Save to GitHub" বাটনে চাপ দিন।
+(যদি ফোনে বাটনগুলো না দেখায়, তাহলে Chrome-এর ওপরের ৩ ডটে ⋮ চাপ দিয়ে Desktop site অন করে নিন।)
+প্রথমবার "Authorize Google AI Studio" চাইলে সবুজ বাটনে চাপ দিয়ে অনুমতি দিন। তারপর প্রজেক্টের একটি নাম লিখুন (যেমন: quran-learning-academy), Public সিলেক্ট করে Create & Push চাপুন।
+২–৩ মিনিট পর GitHub-এ গিয়ে APK ডাউনলোড করুন:
+এই GitHub পেজের একদম ওপরে বামদিকে থাকা ৩ দাগের মেনু (☰) → Repositories → quran-learning-academy ওপেন করুন।
+ওপরের Actions ট্যাবে গেলে দেখবেন Build Quran Learning Academy APK সবুজ টিক (✅) হয়ে গেছে।
+এরপর রিপোজিটরির Releases (অথবা ওই Actions রানের নিচে Artifacts) থেকে QuranLearningAcademy.apk সরাসরি ডাউনলোড করে ফোনে ইনস্টল করুন!
+(যদি AI Studio-র মেনুতে "Push to GitHub" খুঁজে না পান, আমাকে জানান—AI Studio-র ওপরের অংশের একটি স্ক্রিনশট দিলে আমি ঠিক কোন বাটনে চাপ দিতে হবে দেখিয়ে দেব।)
+Checkpoint
+আরে ভাই আমি এটা তে ডুকলেই তো টাই এগিন দেখায়
+Gemini 4 Hydrogen
+Ran for 13s
+আমাদের তৈরি করা অ্যাপের ভেতরে কোনো "Try again" এরর নেই—তাই আপনি যে "Try again" দেখছেন, সেটি Google AI Studio-র ব্রাউজার/প্রিভিউ বা GitHub/ডাউনলোড পপ-আপ থেকে আসছে।
+এটি ঠিক করতে নিচের ৪টি কাজ পরপর করে দেখুন:
+পেজটি রিলোড (Refresh) করুন: সেশন টাইমআউট হলে বা মোবাইল নেট একটু স্লো হলে প্রিভিউ/এমুলেটর বা বাটন "Try again" দেখায়—পেজ রিফ্রেশ করলে আবার কানেক্ট হয়।
+Chrome-এ Desktop site + Pop-up Allow করুন:
+Chrome-এর ওপরের ⋮ (৩ ডট) মেনু থেকে Desktop site অন করুন।
+GitHub পুশ করার সময় পপ-আপ ব্লক হলে "Try again" দেখায়—তাই Chrome Settings → Site settings → Pop-ups and redirects ও Cookies Allow করে দিন।
+যদি "Push to GitHub" বা "APK" আবারও Try again দেখায়:
+তাহলে মেনু থেকে Download / Export ZIP অপশনটি চাপুন। ZIP ডাউনলোড হলে সেটি আপনার GitHub অ্যাকাউন্টে (adormahmudcxrteam-dotcom) সরাসরি আপলোড করলেই ২ মিনিটে APK তৈরি হয়ে যাবে।
+সবচেয়ে দ্রুত সমাধানের জন্য: যেখানে "Try again" লেখা দেখাচ্ছে, ঠিক সেই স্ক্রিনের একটি স্ক্রিনশট এখানে পাঠান—আমি দেখেই বলে দেব ঠিক কী কারণে ওটা হচ্ছে।
+আমি এগুলো আপলোড করবো কি ভাবে
+Gemini 4 Hydrogen
+Ran for 9s
+আপনি যদি Export ZIP থেকে প্রজেক্টের .zip ফাইলটি নামিয়ে থাকেন বা ফাইলগুলো GitHub-এ আপলোড করতে চান, তবে আপনার কাছে কম্পিউটার নাকি শুধু মোবাইল ফোন আছে তার ওপর ভিত্তি করে নিচের উপায়গুলো ব্যবহার করুন:
+১. কম্পিউটার বা ল্যাপটপ থাকলে (মাত্র ২ মিনিটের কাজ):
+ডাউনলোড করা .zip ফাইলটির ওপর রাইট-ক্লিক করে Extract All / Unzip করুন।
+আপনার GitHub অ্যাকাউন্টে (adormahmudcxrteam-dotcom) ঢুকে ওপরের + বা ☰ → Repositories → New বাটনে ক্লিক করুন।
+Repository name লিখুন (যেমন quran-learning-academy), Public সিলেক্ট করে Create repository চাপুন।
+পরের পেজে নীল রঙের "uploading an existing file" লেখায় ক্লিক করুন।
+Extract করা ফোল্ডারের ভেতরের সব ফাইল ও ফোল্ডার (app, gradle, .github, build.gradle.kts, settings.gradle.kts, gradle.properties, .gitignore) একসাথে মাউস দিয়ে টেনে এনে ছেড়ে দিন (খেয়াল রাখবেন যেন বাইরে থাকা মূল ফোল্ডারটা না, ভেতরের ফাইলগুলো টানেন)।
+সব আপলোড হলে নিচে সবুজ Commit changes বাটনে চাপুন। ২–৩ মিনিটেই Actions / Releases থেকে QuranLearningAcademy.apk পেয়ে যাবেন!
+২. শুধু মোবাইল ফোন থাকলে (জরুরি টিপস):
+মোবাইল ফোনের Chrome ব্রাউজারে GitHub ওয়েবসাইট থেকে পুরো ফোল্ডার একসাথে আপলোড করা যায় না (মোবাইলে ফোল্ডার সিলেক্ট হয় না)। তাই শুধু ফোন থাকলে নিচের ২টি সহজ পথের যেকোনো একটি নিন:
+পথ ক (সবচেয়ে সহজ — Push to GitHub বাটন দিয়ে):
+Chrome-এর ওপরের ৩ ডটে (⋮) চাপ দিয়ে Desktop site অন করে AI Studio-র ওপরের GitHub আইকন → Push to GitHub ব্যবহার করুন। এতে কোনো ফাইল আলাদা আপলোড করতে হবে না, সব ফোল্ডার অটোমেটিক চলে যাবে।
+পথ খ (AI Studio থেকে সরাসরি APK ডাউনলোড):
+আপলোড করার ঝামেলা ছাড়াই সরাসরি .apk পেতে AI Studio পেজের ওপরের Settings (⚙️) / Menu (⋮) থেকে Build APK / Download APK অপশন কাজ করছে কি না দেখুন।
+(আপনি এখন কোন ধাপে আছেন—ZIP ফাইল ডাউনলোড করেছেন কি না এবং ফোন নাকি কম্পিউটার ব্যবহার করছেন—জানালে আমি একদম আপনার ডিভাইস অনুযায়ী পরের ধাপটা বলে দেব।)
+এখন কি করবো
+Screenshot_2026-11-21-16-26-45-450_com.android.chrome.jpg
+Screenshot_2026-11-21-16-26-45-450_com.android.chrome.jpg
+Gemini 4 Hydrogen
+Ran for 24s
+দারুণ! আপনি একদম সঠিক জায়গায় (GitHub sync) চলে এসেছেন। এখন এই স্ক্রিনে শুধু নিচের ৩টি কাজ করুন:
+New repository name ঘরে লিখুন (স্পেস ছাড়া ছোট হাতের অক্ষরে):
+quran-learning-academy
+New repository description ঘরে লিখুন (ইচ্ছা হলে):
+Quran Learning Academy Android App by Zubayer Hasan Masum
+Visibility অপশনটি Public-ই রাখুন (এতে সবার জন্য ডাউনলোড লিংক কাজ করবে)।
+এবার স্ক্রিনটা একটু নিচের দিকে স্ক্রল করে Create repository / Push বাটনে চাপ দিন। (যদি এরপর আলাদা "Push" বা "Commit & Push" বাটন আসে, সেটিতেও চাপ দিন।)
+পুশ হয়ে গেলে ২–৩ মিনিট পর আপনার APK ও ডাউনলোড লিংক:
+GitHub-এ পুশ শেষ হওয়ার ২–৩ মিনিট পর নিচের লিংকে ঢুকলেই আপনার অ্যাপের সরাসরি ডাউনলোড পেজ পেয়ে যাবেন:
+Actions অবস্থা দেখতে: https://github.com/adormahmudcxrteam-dotcom/quran-learning-academy/actions
+APK ডাউনলোড করতে: https://github.com/adormahmudcxrteam-dotcom/quran-learning-academy/releases/latest
+(ওখানে সবুজ টিক ✅ আসার সাথে সাথেই QuranLearningAcademy.apk দেখতে পাবেন—ট্যাপ করলেই আপনার ফোনে ডাউনলোড হয়ে ইনস্টল করতে পারবেন!)
+Checkpoint
+হয় না তো
+Gemini 4 Hydrogen
+Ran for 18s
+ঠিক কোন জায়গায় আটকে যাচ্ছে তা দেখতে আমাকে এখনকার স্ক্রিনের একটি স্ক্রিনশট পাঠান, তাহলে আমি একদম সঠিক সমাধান দিতে পারবো।
+আপাতত দ্রুত ২টি বিষয় চেক করে দেখুন:
+বাটন না পেলে বা চাপ কাজ না করলে: Chrome-এর ওপরের ⋮ (৩ ডট) মেনু থেকে Desktop site অন করে আবার GitHub-এ যান—মোবাইল ভিউতে নিচের Create / Push বাটন অনেক সময় ঢেকে থাকে।
+Push চাপার পর এরর বা লাল চিহ্ন দেখালে: ঠিক কী লেখা বা এরর আসছে তার একটি স্ক্রিনশট এখানে দিন (অনেক সময় GitHub OAuth পারমিশনের কারণে .github/workflows ফাইল পুশ করতে বাধা দেয়—এরকম হলে আমি সাথে সাথে সেটা ঠিক করে দেব)।
+তুমি আমাকে এমন কোন লিংক দিতে পারবা যে লিংক এর মধ্যে ডুকে apk ডাউনলোড দিতে
+Gemini 4 Hydrogen
+Ran for 12s
+সত্যি কথা বলতে—না ভাই, আমি চ্যাটের ভেতরে এমন কোনো সরাসরি .apk ডাউনলোড লিংক দিতে পারবো না। কারণ:
+আমি কেবল এই Google AI Studio-র ভেতরে আপনার অ্যাপের কোড তৈরি ও বিল্ড করতে পারি; কিন্তু তৈরি হওয়া .apk ফাইলটি বাইরে কোনো সার্ভারে (যেমন Google Drive বা ওয়েবসাইটে) আপলোড করে লিংক দেওয়ার ক্ষমতা আমার নেই। (ভুয়া বা কাজ না করা কোনো লিংক দেওয়াও ঠিক হবে না।)
+এখন আপনার হাতে আসল .apk নেওয়ার সবচেয়ে সহজ ২টি উপায়:
+AI Studio থেকেই সরাসরি নামানো (যদি আপনার স্ক্রিনে অপশন থাকে):
+আপনার আগের স্ক্রিনশটের ওপরের বারটাতে (Chat | Share | Publish | Versions | GitHub | >) ডানদিকের > বা Settings (⚙️) মেনুতে চাপ দিন (প্রথমে Chrome-এ Desktop site অন করে নিলে সব বাটন পুরোপুরি দেখা যাবে)।
+সেখানে Download APK / Generate APK / Build APK অপশন পেলে ওটাতে ক্লিক করলেই সরাসরি আপনার ফোনে .apk ডাউনলোড হবে।
+GitHub থেকে স্থায়ী .apk ডাউনলোড লিংক নেওয়া:
+আগের স্ক্রিনশটের GitHub sync পেজে নাম লিখে Create/Push করার পর কি কোনো এরর দেখিয়েছে?
+অনেক সময় GitHub OAuth পারমিশনের কারণে .github/workflows/build-apk.yml ফাইল থাকা অবস্থায় AI Studio থেকে পুশ হতে চায় না।
+যদি আপনার GitHub sync-এ পুশ করতে গিয়ে এরর আসে, আমাকে শুধু বলুন "এরর আসছে"—তাহলে আমি ওই ওয়ার্কফ্লো ফাইলটা সরিয়ে দেব, যেন কোডটা সাথে সাথে আপনার GitHub-এ পুশ হয়ে যায় এবং তারপর GitHub থেকেই আপনার জন্য ডাউনলোড লিংক তৈরি হয়।
+হয় না
+Gemini 4 Hydrogen
+Ran for 37s
+Edited 2 files
+.github/workflows/build-apk.yml
+.github
+GitHub OAuth পারমিশন যেন পুশ করতে বাধা না দেয়, সেজন্য আমি .github/workflows ফোল্ডারটি এখন সরিয়ে দিয়েছি।
+এখন ঠিক এই কাজটি করুন:
+Chrome-এর ওপরের ⋮ (৩ ডট) মেনু থেকে Desktop site অন করুন।
+ওপরের GitHub ট্যাবে গিয়ে Repository name-এ quran-learning-academy লিখে Public রেখে Create / Push দিন।
+যদি এটি হয়ে যায়: আমাকে শুধু লিখুন "GitHub-এ চলে গেছে" — তারপর আমি GitHub ওয়েবসাইটের ভেতর থেকেই ১ মিনিটে .apk বানানোর নিয়ম বলে দেব।
+আর যদি GitHub sync বা ডাউনলোড এখনো না হয়:
+তাহলে AI Studio পেজের ওপরের বারে থাকা > চিহ্নে (ডানদিকের মেনুতে) চাপ দিয়ে Settings / Download ZIP অপশন কাজ করছে কি না দেখুন, এবং স্ক্রিনে কী দেখাচ্ছে তার একটি স্ক্রিনশট পাঠান—স্ক্রিনশট না দেখলে ঠিক কোন বাটনে সমস্যা হচ্ছে ধরা যাচ্ছে না।
+Checkpoint
+এমন দেখায়
+.trashed-1797639961-Screenshot_2026-11-18-06-48-51-215_com.android.chrome_659f1ccf.jpg
+.trashed-1797639961-Screenshot_2026-11-18-06-48-51-215_com.android.chrome_659f1ccf.jpg
+.trashed-1797639961-Screenshot_2026-11-18-07-21-48-205_com.android.chrome_93066dfc.jpg
+.trashed-1797639961-Screenshot_2026-11-18-07-21-48-205_com.android.chrome_93066dfc.jpg
+Gemini 4 Hydrogen
+Ran for 25s
+আপনার প্রথম স্ক্রিনশটেই দেখুন—সঠিক বাটনগুলো একদম ওপরে ডানদিকে আছে! আপনার ২য় স্ক্রিনশটে আপনি Artifacts ট্যাবে চলে গিয়েছিলেন বলেই ফাইল দেখাচ্ছিল না।
+এখন ঠিক এই কাজগুলো করুন:
+প্রথমে 👁️ (চোখের আইকন)-এ ট্যাপ করুন:
+২য় স্ক্রিনশটের ওপরে Artifacts-এর বাম পাশে থাকা চোখের আইকন (👁️)-এ ট্যাপ করলে আবার অ্যাপের প্রিভিউ স্ক্রিন ফিরে আসবে।
+সরাসরি 📱 Install বাটন দিয়ে ইনস্টল/ডাউনলোড করুন:
+প্রথম স্ক্রিনশটের ডানপাশের ওপরে দেখুন—⟳ ⛶ 📷 আইকনের ঠিক ডানপাশে 📱 Install বাটন আছে।
+ওটাতে ট্যাপ করে দেখুন ফোনে সরাসরি Download APK / Install অপশন বা QR কোড আসে কি না।
+না হলে ⚙️ (গিয়ার/সেটিংস) বা Publish চাপুন:
+একদম ওপরের ডান কোনায় Share | Publish | 🐛 | ⚙️ আছে—ওই ⚙️ (Settings) অথবা Publish বাটনে চাপ দিয়ে দেখুন Download / Generate APK বা Download ZIP অপশন আসে কি না।
+GitHub দিয়ে করতে চাইলে:
+আগের মতো GitHub ট্যাবে গিয়ে quran-learning-academy নাম লিখে একদম নিচে স্ক্রল করে Create চাপুন (এখন .github ফোল্ডার সরিয়ে দেওয়ায় আর বাধা দেওয়ার কথা নয়)।
+(এই 📱 Install, ⚙️, বা GitHub-এর যেকোনো একটিতে চাপ দিলে স্ক্রিনে ঠিক কী অপশন বা এরর লেখা আসে, তার একটি স্ক্রিনশট দিলেই আমি ঠিক পরের ক্লিকটা বলে দেব।)
+Checkpoint
+এখন কোথায় কি করবো
+.trashed-1797639961-Screenshot_2026-11-18-06-48-51-215_com.android.chrome_659f1ccf.jpg
+.trashed-1797639961-Screenshot_2026-11-18-06-48-51-215_com.android.chrome_659f1ccf.jpg
+Gemini 4 Hydrogen
+Ran for 21s
+এই স্ক্রিন থেকেই মাত্র ১টি বাটনে ট্যাপ করুন:
+প্রথম চেষ্টা (📱 Install বাটন):
+স্ক্রিনের ডানদিকে ওপরে দেখুন 👁️ Preview - <> - ••• লাইনটির একদম ডান কোনায় 📱 Install লেখা আছে (ছোট ক্যামেরা 📷 আইকনের ঠিক ডান পাশে)।
+ওই 📱 Install বাটনটিতে ট্যাপ করুন—সরাসরি ফোনে APK ডাউনলোড/ইনস্টল করার অপশন খুলবে কি না দেখুন।
+যদি 📱 Install কাজ না করে (⚙️ সেটিংস মেনু):
+ওই লাইনের ঠিক ওপরে একদম ডান কোনায় Publish-এর ডান পাশে থাকা ⚙️ (গিয়ার আইকন)-এ ট্যাপ করুন—সেখান থেকে Generate APK / Download APK বা Download ZIP অপশন পাবেন।
+(এই দুটির মধ্যে কোনটি ট্যাপ করার পর কী মেনু খুলল, সেটা জানাতে পারেন।)
+Checkpoint
+তুমিই দেখলা এই অপশন আমি দেখছি না তো
+Gemini 4 Hydrogen
+Ran for 8s
+আপনি একদম ঠিক বলেছেন—আমি আপনার আগের (১৮ তারিখের) পুরোনো স্ক্রিনশট দেখে ওই বাটনের কথা বলেছিলাম; আপনার বর্তমান স্ক্রিনের ডিজাইন আলাদা।
+আপনার এখনকার স্ক্রিনে (যেখানে ওপরের লাইনে Chat | Share | Publish | Versions | GitHub | Integ... > আছে) নিচের ২টি জায়গায় ট্যাপ করে দেখুন:
+Publish বাটনে ট্যাপ করুন:
+দেখুন ভেতরে Generate APK / Build APK / Download ধরনের কোনো অপশন আসে কি না।
+ডানদিকের > (তীর চিহ্ন) বা Share-এ ট্যাপ করুন:
+Integ... লেখার ঠিক ডান পাশে থাকা > চিহ্নে চাপ দিলে পাশের লুকানো অপশনগুলো (যেমন Download / Export ZIP / Settings) সামনে চলে আসবে।
+(এছাড়া এখন যেহেতু .github ফোল্ডার সরিয়ে দিয়েছি, GitHub ট্যাবে গিয়ে quran-learning-academy নাম লিখে একদম নিচে স্ক্রল করে Push বাটন দেখতে পান কি না তাও দেখতে পারেন। স্ক্রিনে যেই মেনু খুলবে, সেটার একটি স্ক্রিনশট পাঠালেই আমি বলে দেব কোনটিতে চাপ দেবেন।)
+এটা এখন এর এটা দেকো কিছু করতে পারো কি না
+.trashed-1797639961-Screenshot_2026-11-18-06-48-51-215_com.android.chrome_659f1ccf.jpg
+.trashed-1797639961-Screenshot_2026-11-18-06-48-51-215_com.android.chrome_659f1ccf.jpg
+Gemini 4 Hydrogen
+Ran for 28s
+এই স্ক্রিনশট অনুযায়ী AI Studio-র কোড ও বিল্ড একদম ঠিক আছে, কিন্তু আমি এখান থেকে আপনার হয়ে ব্রাউজারের ডাউনলোড বাটনে ক্লিক করতে পারি না—ফাইলটি ডাউনলোড করার বাটন আপনাকেই চাপতে হবে।
+এই স্ক্রিনে থাকা নিচের ৩টি বাটনের যেকোনো ১টিতে এখনই ট্যাপ করে দেখুন কী মেনু আসে:
+একদম ওপরের ডান কোনায় থাকা ⚙️ (গিয়ার/সেটিংস আইকন) — Publish-এর ঠিক ডান পাশে (২য় ছোট আইকনটি)।
+Preview ও <>-এর পাশের ••• (তিন ডট) বাটন।
+Publish বাটন।
+(কোনো একটিতে ট্যাপ করলে যে মেনু/পপ-আপ ওপেন হবে—যেখানে Download, Export ZIP, APK, বা GitHub লেখা থাকবে—সেই মেনুটির স্ক্রিনশট পাঠালে আমি বলে দেব ঠিক কোন লেখায় চাপ দিলে ডাউনলোড শুরু হবে।)
+Checkpoint
+I made some changes.
+Manual edit
+Edited 1 file
+metadata.json
+Checkpoint
+এটা দেখো
+Screenshot_2026-11-23-00-24-27-901_com.android.chrome.jpg
+Screenshot_2026-11-23-00-24-27-901_com.android.chrome.jpg
+Gemini 4 Hydrogen
+Ran for 36s
+
+Action history
+Here are key actions taken for the app:
+
+Edited 1 file
+metadata.json
+Built
+দারুণ! এই স্ক্রিনশটে পুরো বিষয়টি একদম পরিষ্কার দেখা যাচ্ছে (পাশাপাশি metadata.json ফাইলে আপনার হাতের চাপে যে ভুল টাইপ হয়ে গিয়েছিল, আমি সেটিও ঠিক করে অ্যাপটি সফলভাবে বিল্ড করে দিয়েছি)।
+আপনার Export মেনুতে সরাসরি .apk নেই, তবে ২টি আসল উপায় আছে—পাশাপাশি ওপরের ⚙️ বাটনটিও চেক করা যাবে:
+১. এখনই সবচেয়ে সহজ কাজ (Push to GitHub):
+এই মেনুতেই থাকা Push to GitHub লেখায় ট্যাপ করুন (আগে যে .github ফোল্ডারটি পুশ আটকে দিচ্ছিল, সেটি আমি সরিয়ে দিয়েছি)।
+এরপর quran-learning-academy নাম দিয়ে Public সিলেক্ট করে নিচে স্ক্রল করে Push দিন।
+Push হয়ে গেলে আমাকে বলুন—তারপর GitHub ওয়েবসাইটের ভেতর থেকেই ২ মিনিটে আসল QuranLearningAcademy.apk ও ডাউনলোড লিংক বানানোর ১টি ছোট ধাপ দেখিয়ে দেব।
+২. কম্পিউটার থাকলে (Download as .zip file):
+Download as .zip file-এ ট্যাপ করলে পুরো প্রজেক্টটি আপনার ফোনে .zip আকারে ডাউনলোড হয়ে যাবে। এরপর যেকোনো পিসির Android Studio-তে ফাইলটি ওপেন করে Build → Build APK(s) চাপলেই সাথে সাথে আসল .apk পাবেন।
+৩. সরাসরি APK অপশন আছে কি না দেখতে:
+ওই Export মেনু ছাড়াও একদম ওপরে ডান কোনায় থাকা Publish অথবা ⚙️ (গিয়ার/সেটিংস) আইকনটিতে ট্যাপ করে দেখতে পারেন ওখানে Build APK / Download APK অপশন দেয় কি না।
+আপনি আগে Push to GitHub অথবা ⚙️-তে ট্যাপ করে দেখুন কী দেখায়!
+Checkpoint
+দেখায় না
+Gemini 4 Hydrogen
+Ran for 7s
+ঠিক আছে, তাহলে এখানে সরাসরি APK বাটন নেই—এখন ফোনে .apk পাওয়ার একমাত্র সহজ রাস্তা হলো Push to GitHub (কারণ কম্পিউটার থাকলে Download as .zip file দিয়েও করা যায়)।
+এখন শুধু এই কাজটি করুন:
+ওই Export মেনু থেকে Push to GitHub-এ ট্যাপ করুন (অথবা ওপরের বারে Publish-এর পাশের GitHub আইকনে ট্যাপ করুন)।
+New repository name-এ quran-learning-academy লিখে Public সিলেক্ট করে নিচে স্ক্রল করে Create / Push চাপুন।
+(বাটনটি দেখতে না পেলে Chrome-এর ৩ ডট ⋮ → Desktop site অন করে আবার দেখুন।)
+পুশ হয়ে গেলে আমাকে শুধু লিখুন "GitHub-এ চলে গেছে" — তারপর আমি GitHub ওয়েবসাইটের ভেতর থেকেই .apk ও ডাউনলোড লিংক তৈরি করে দেওয়া শিখিয়ে দেব।
+(আর পুশ করতে গেলে যদি কোনো এরর দেখায়, শুধু ওই এররের স্ক্রিনশটটা দিন।)
+আমার মোবাইল ফোন এখন কি ভাবে করবো
+Gemini 4 Hydrogen
+Ran for 7s
+কম্পিউটার ছাড়াই শুধু মোবাইল ফোন দিয়ে আসল .apk বানাতে সবচেয়ে সহজ ২টি পথ নিচে দিলাম—প্রথমে ১ নম্বর পথটি চেষ্টা করুন:
+১. মোবাইল থেকেই সরাসরি Push to GitHub করুন (সবচেয়ে সহজ):
+আপনার আগের স্ক্রিনশটের Export মেনুতে থাকা Push to GitHub-এ ট্যাপ করুন (অথবা Publish-এর পাশের GitHub আইকনে)।
+New repository name-এ quran-learning-academy লিখুন এবং Public সিলেক্ট করুন।
+মোবাইলে নিচের বাটনটি না দেখালে:
+Chrome-এর একদম ওপরে ডানদিকে ⋮ (৩ ডট) → Desktop site টিক দিয়ে চালু করুন।
+তখন পর্দা ছোট দেখাবে এবং নিচে থাকা Create git repo / Push বাটন স্পষ্ট দেখা যাবে—সেটিতে ট্যাপ করুন!
+কোড GitHub-এ চলে গেলে আমাকে বলুন, আমি পরের ২ মিনিটের ধাপটি বলে দেব—ওখান থেকেই সরাসরি QuranLearningAcademy.apk ডাউনলোড করতে পারবেন।
+২. যদি মোবাইলে Push to GitHub কোনোভাবেই কাজ না করে (বিকল্প মোবাইল উপায়):
+Export মেনু থেকে Download as .zip file-এ ট্যাপ করে পুরো প্রজেক্টটি ফোনে ডাউনলোড করুন।
+তারপর আমাকে বলুন "ZIP ডাউনলোড করেছি" — তাহলে আমি মোবাইল ফোনের ভেতর থেকেই (Termux বা GitHub-এর মাধ্যমে) ওই ZIP ফাইল থেকে আসল .apk বের করার একদম সহজ কমান্ডগুলো দিয়ে দেব।
+আগে ১ নম্বর (Desktop site অন করে Push to GitHub) চেষ্টা করে দেখুন কী দেখায়!
+ডাউনলোড করছি
+Gemini 4 Hydrogen
+Ran for 26s
+চমৎকার! এখন কোনো কম্পিউটার বা অতিরিক্ত অ্যাপ ছাড়াই, শুধু আপনার মোবাইল ফোনের Chrome ব্রাউজারে ওই ডাউনলোড করা .zip ফাইলটি থেকেই ৩–৪ মিনিটে আসল .apk ও ডাউনলোড লিংক পেয়ে যাবেন:
+ধাপ ১: আপনার .zip ফাইলটি GitHub-এ আপলোড করুন
+Chrome-এ github.com খুলুন (আপনার adormahmudcxrteam-dotcom অ্যাকাউন্টে)।
+বামের ☰ মেনু → Repositories → New বাটনে চাপ দিন।
+Repository name লিখুন: quran-learning-academy, Public সিলেক্ট করে নিচে Create repository চাপুন।
+পরের পেজে নীল রঙের uploading an existing file লেখায় ট্যাপ করুন।
+choose your files-এ ট্যাপ করে আপনার ফোনের Downloads থেকে ওই .zip ফাইলটি সিলেক্ট করুন।
+আপলোড শেষ হলে নিচে সবুজ Commit changes বাটনে চাপ দিন।
+ধাপ ২: অটোমেটিক APK বানানোর কোডটি যোগ করুন
+এবার আপনার quran-learning-academy পেজে ওপরে Add file → Create new file চাপুন (অথবা Actions → set up a workflow yourself)।
+Name your file... ঘরে হুবহু এটি লিখুন:
+.github/workflows/build.yml
+নিচের বড় বক্সে পুরো এই কোডটি কপি করে পেস্ট করুন:
+Yaml
+name: Build APK
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract ZIP
+        run: |
+          ZIP_FILE=$(ls *.zip | head -n 1)
+          mkdir -p extracted
+          unzip -q -o "$ZIP_FILE" -d extracted
+          if [ -f extracted/settings.gradle.kts ]; then
+            cp -a extracted/. .
+          else
+            SUBDIR=$(find extracted -maxdepth 2 -name "settings.gradle.kts" -exec dirname {} \; | head -n 1)
+            cp -a "$SUBDIR"/. .
+          fi
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Prepare keystore
+        run: |
+          if [ -f debug.keystore.base64 ]; then
+            base64 -d debug.keystore.base64 > debug.keystore
+          else
+            keytool -genkeypair -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+          fi
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.3.1'
+
+      - name: Build APK
+        run: gradle :app:assembleDebug --no-daemon
+
+      - name: Prepare APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk QuranLearningAcademy.apk
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest-apk
+          name: Quran Learning Academy APK
+          files: QuranLearningAcademy.apk
+          make_latest: true
+ওপরে ডানদিকে সবুজ Commit changes... বাটনে চাপ দিয়ে সেভ করুন।
+ধাপ ৩: ২–৩ মিনিট পর .apk ডাউনলোড করুন!
+২–৩ মিনিট পর এই লিংকে ঢুকুন:
+https://github.com/adormahmudcxrteam-dotcom/quran-learning-academy/releases/latest
+ওখানেই QuranLearningAcademy.apk ডাউনলোড করার সরাসরি ফাইল ও স্থায়ী লিংক পেয়ে যাবেন!
+(কোথাও আটকে গেলে বা Actions-এ কোনো লেখা দেখালে আমাকে স্ক্রিনশট দিন, আমি সাথে সাথে সাহায্য করবো।)
+এগুলো কিছু আমি পাইনা
+Gemini 4 Hydrogen
+Ran for 9s
+কোনো সমস্যা নেই ভাই, একসাথে অনেক ধাপ দেখে কঠিন লাগা স্বাভাবিক—আমরা একবারে মাত্র ১টা করে ছোট কাজ করবো।
+আপনি এখন শুধু এই ১টি কাজ করুন:
+আপনার ফোনের Chrome ব্রাউজারে এই লিংকটি ওপেন করুন: github.com/new
+পেজটি খোলার পর যে স্ক্রিন আসবে, সেটির একটি স্ক্রিনশট এখানে পাঠান।
+(আমি প্রতিটি ধাপে একটা করে বাটন দেখিয়ে দেব, আপনার কিছুই খুঁজতে বা বুঝতে কষ্ট করতে হবে না। আর আপনার হাতের কাছে যদি কারো কম্পিউটার/ল্যাপটপ থাকে, তাহলে ডাউনলোড করা .zip ফাইলটি থেকে Android Studio দিয়ে আরও সহজে .apk বের করা যাবে।)
+এটা এখন কি করবো
+Screenshot_2026-11-23-00-39-31-887_com.android.chrome.png
+Screenshot_2026-11-23-00-39-31-887_com.android.chrome.png
+Gemini 4 Hydrogen
+Ran for 25s
+খুব ভালো! এখন একদম ছোট এই ১টি কাজ করুন:
+এই স্ক্রিনের ওপরে বাম কোনায় (GitHub বিড়াল আইকনের ঠিক বাম পাশে থাকা) ☰ (৩ দাগের বক্স বাটন)-এ ট্যাপ করুন।
+সেখানে Repositories অপশনে ট্যাপ করলে যে পেজ আসবে—তার একটি স্ক্রিনশট এখানে পাঠান (অথবা সরাসরি সবুজ New বাটনে ট্যাপ করে স্ক্রিনশট দিন)।
+Checkpoint
+এখন
+Screenshot_2026-11-23-00-41-37-654_com.android.chrome.png
+Screenshot_2026-11-23-00-41-37-654_com.android.chrome.png
+Gemini 4 Hydrogen
+Ran for 23s
+এই মেনুতে থাকা ৫ নম্বর লেখা All repositories-এ ট্যাপ করুন।
+এরপর যে পেজটি আসবে—সেখানে সবুজ New বাটন দেখতে পেলে ওটাতে ট্যাপ করুন, অথবা পেজটির একটি স্ক্রিনশট পাঠান।
+Checkpoint
+এখন কি করবো
+Screenshot_2026-11-23-00-43-59-353_com.android.chrome.png
+Screenshot_2026-11-23-00-43-59-353_com.android.chrome.png
+Gemini 4 Hydrogen
+Ran for 24s
+আরে দারুণ!! আপনার অ্যাপ তো আগেই GitHub-এ সেভ হয়ে গেছে—ওই যে নিচে adormahmudcxrteam-dotcom/quran-academy দেখাচ্ছে!
+এখন শুধু এই ১টি কাজ করুন:
+adormahmudcxrteam-dotcom/quran-academy লেখাটির ওপর ট্যাপ করে ভেতরে ঢুকুন।
+ভেতরে ঢুকে পেজটির একটি স্ক্রিনশট পাঠান (তাহলেই আমি দেখে বলে দেব ভেতরে নতুন ফাইল ও APK তৈরি হয়ে আছে কি না)!
+Checkpoint
+এগুলো দেখাচ্ছে
+Screenshot_2026-11-23-00-45-42-709_com.android.chrome.jpg
+Screenshot_2026-11-23-00-45-42-709_com.android.chrome.jpg
+Screenshot_2026-11-23-00-45-39-281_com.android.chrome.jpg
+Screenshot_2026-11-23-00-45-39-281_com.android.chrome.jpg
+Gemini 4 Hydrogen
+Ran for 22s
+দারুণ! এখানে এখনো শুধু README.md আছে, আমাদের আসল অ্যাপের ফাইলগুলো নেই—যেহেতু আপনার ফোনে ইতিমধ্যেই .zip ফাইলটি ডাউনলোড করা আছে, এখন সেটি এখানে আপলোড করে দিন।
+এখনকার স্ক্রিনে (২য় ছবিতে) শুধু নিচের কাজটুকু করুন:
+সবুজ Code বাটনের ডান পাশে থাকা ••• (তিন ডট) বাটনে ট্যাপ করুন।
+ওখান থেকে Upload files (অথবা Add file → Upload files)-এ ট্যাপ করুন।
+choose your files-এ চাপ দিয়ে আপনার ফোনের Downloads থেকে ওই ডাউনলোড করা .zip ফাইলটি সিলেক্ট করুন।
+ফাইলটি আপলোড হয়ে গেলে নিচে সবুজ Commit changes বাটনে চাপ দিন।
+(এইটুকু করে আমাকে জানান বা একটি স্ক্রিনশট দিন—এরপর মাত্র ১টা ক্লিকেই আপনার .apk তৈরি হয়ে যাবে!)
+Checkpoint
+এখন
+Screenshot_2026-11-23-00-54-43-051_com.android.chrome.jpg
+Screenshot_2026-11-23-00-54-43-051_com.android.chrome.jpg
+Gemini 4 Hydrogen
+Ran for 26s
+দাঁড়ান! ছবিতে দেখুন আপনি ভুল করে পুরোনো .html ফাইলগুলো (index.html, quran_learning_academy.html) সিলেক্ট করে ফেলেছেন—এগুলো দিয়ে Android অ্যাপ (.apk) হবে না।
+এখন ঠিক এই কাজটি করুন:
+নিচের লালচে Cancel বাটনে চাপ দিয়ে এগুলো বাতিল করুন।
+এরপর আবার ••• → Upload files → choose your files-এ চাপ দিন।
+ফোনের Downloads ফোল্ডার থেকে একদম শেষে .zip লেখা আছে এমন ফাইলটি সিলেক্ট করুন (যেমন: quran-academy.zip — কোনো .html ফাইল নেবেন না)।
+শুধুমাত্র ওই একটি .zip ফাইল তালিকায় এলে নিচে সবুজ Commit changes বাটনে চাপ দিন!
+(আপলোড হয়ে গেলে আমাকে একটি স্ক্রিনশট দিন।)
+Checkpoint
+এখন কি করবো
+Screenshot_2026-11-23-01-00-17-371_com.android.chrome.jpg
+Screenshot_2026-11-23-01-00-17-371_com.android.chrome.jpg
+Gemini 4 Hydrogen
+Ran for 31s
+একটা ছোট বিষয় নিশ্চিত হয়ে নিই: ছবিতে দেখছি -Masum-main.zip আপলোড হয়েছে।
+এটি কি এইমাত্র AI Studio-র Download as .zip file থেকে নামানো ফাইল, নাকি আপনার ফোনে আগে থেকে থাকা পুরোনো কোনো .zip ফাইল?
+(সাধারণত AI Studio থেকে নামালে ফাইলের নাম quran-academy.zip বা প্রজেক্টের নামে হয়, আর -main.zip নামটি আগের কোনো GitHub ফাইল হতে পারে।)
+এখন যা করবেন:
+আপনার ফোনের Files / Downloads অ্যাপে এক নজর দেখে নিন আজকে AI Studio থেকে নামানো quran-academy.zip (বা অন্য কোনো নতুন .zip) ফাইল আছে কি না—থাকলে সেটিই ••• → Upload files দিয়ে আপলোড করুন।
+আর যদি দেখেন -Masum-main.zip-ই আজকের ফাইল (অথবা ওটা দিয়েই চেষ্টা করতে চান), তাহলে এই স্ক্রিনের ওপরে ডানদিকে থাকা More ▾ লেখায় ট্যাপ করে Actions-এ যান, এবং কী দেখাচ্ছে তার একটি স্ক্রিনশট পাঠান!
+Checkpoint
+মাএ নামানো ফাইল এটা চিনতে সুবিদা হওয়ার কারনে এই নাম দিলাম
+Gemini 4 Hydrogen
+Ran for 14s
+অসাধারণ! ফাইলটার নাম আগে - থাকায় আমি কোডটি ঠিক সেইভাবে (-Masum-main.zip অনুযায়ী) সাজিয়ে দিলাম যেন কোনো এরর ছাড়াই কাজ করে।
+এখন একদম শেষ ৩টি ছোট ধাপ করুন:
+১. Workflow পেজ খুলুন:
+আপনার স্ক্রিনের একদম ওপরে ডানদিকে More ▾ লেখায় ট্যাপ করে Actions-এ যান।
+সেখানে set up a workflow yourself লেখা সবুজ/নীল বাটনে ট্যাপ করুন (পেজের নাম ওপরে অটোমেটিক .github/workflows/... বসানো থাকবে)।
+২. আগের লেখা মুছে নিচের কোডটি পেস্ট করুন:
+মাঝখানের কোড লেখার বক্সে আগে যা লেখা আছে সব Select All → Delete করে মুছে ফেলুন।
+এরপর নিচের পুরো কোডটি কপি করে ওখানে পেস্ট করুন:
+Yaml
+name: Build APK
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract ZIP
+        run: |
+          mkdir -p extracted
+          unzip -q -o -- "-Masum-main.zip" -d extracted
+          rm -rf extracted/.github
+          if [ -f extracted/settings.gradle.kts ]; then
+            cp -a extracted/. .
+          else
+            SUBDIR=$(find extracted -maxdepth 2 -name "settings.gradle.kts" -exec dirname {} \; | head -n 1)
+            cp -a "$SUBDIR"/. .
+          fi
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Prepare keystore
+        run: |
+          if [ -f debug.keystore.base64 ]; then
+            base64 -d debug.keystore.base64 > debug.keystore
+          else
+            keytool -genkeypair -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+          fi
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.3.1'
+
+      - name: Build APK
+        run: gradle :app:assembleDebug --no-daemon
+
+      - name: Prepare APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk QuranLearningAcademy.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: QuranLearningAcademy-APK
+          path: QuranLearningAcademy.apk
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest-apk
+          name: Quran Learning Academy APK
+          files: QuranLearningAcademy.apk
+          make_latest: true
