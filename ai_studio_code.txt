@@ -1,0 +1,57 @@
+name: Build APK
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract ZIP
+        run: |
+          ZIP_FILE=$(ls *.zip | head -n 1)
+          mkdir -p extracted
+          unzip -q -o "$ZIP_FILE" -d extracted
+          if [ -f extracted/settings.gradle.kts ]; then
+            cp -a extracted/. .
+          else
+            SUBDIR=$(find extracted -maxdepth 2 -name "settings.gradle.kts" -exec dirname {} \; | head -n 1)
+            cp -a "$SUBDIR"/. .
+          fi
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Prepare keystore
+        run: |
+          if [ -f debug.keystore.base64 ]; then
+            base64 -d debug.keystore.base64 > debug.keystore
+          else
+            keytool -genkeypair -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+          fi
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.3.1'
+
+      - name: Build APK
+        run: gradle :app:assembleDebug --no-daemon
+
+      - name: Prepare APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk QuranLearningAcademy.apk
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest-apk
+          name: Quran Learning Academy APK
+          files: QuranLearningAcademy.apk
+          make_latest: true
